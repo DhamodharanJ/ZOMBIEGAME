@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gameover</title>
+    <style>
+    body{
+        background-image: url(bg.jpg);
+        /* background-size: cover; */
+        background-size: 90rem 40rem;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+    button{
+        height: 3rem;
+        width: 7rem;
+        border-radius: 1.5rem;
+        font-size: large;
+        padding: 2px;
+        background-color: yellow;
+        margin-top: 5%;
+    }
+    .score{
+        /* border: 2px solid red; */
+        color: white;
+        font-size: xx-large;
+        margin-top: 20%;
+    }
+    h1,h2{
+        display: inline-block;
+    }
+    h1{
+        color: green;
+    }
+    h2{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <div class="gameover">
+      <div class="score"></div>
+        <button>Restart</button></div>
+    <script>    
+    
+const score = localStorage.getItem('zombieScore') || 0;
+console.log(score)
+document.querySelector(".score").innerHTML=`<h1>Score:</h1> <h2>${score}</h2>`;
+document.querySelector("button").addEventListener("click",()=>{
+window.location.href="zom.html";
+})
+    </script>
+</body>
+</html>

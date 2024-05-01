@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: pink;
+}
+.game-board{
+    height: 11rem;
+    width: 11rem;
+    background-color: red;
+}
+img{
+    height: 10rem;
+    width: 160px;
+}
+
+.container{
+    animation: move 5s linear infinite;
+}
+.life{
+    width: 100vw;
+    height: 2rem;
+    background-color: green;
+    position: absolute;
+    bottom: 0vh;
+    /* border: 2px solid black; */
+    /* margin-bottom: 100vh; */
+}
+.time{
+    height: 4rem;
+    width: 4rem;
+    font-size: 2.5rem;
+    background-color: white;
+    color: blue;
+    padding-top: 5px;
+    border-radius: 50px;
+    text-align: center;
+}
+@keyframes move{
+    0%{
+     margin-top: 100vh;
+    }
+    100%{
+     margin-top: -50vh;
+    }
+}
